@@ -2,6 +2,7 @@
 {
     public abstract class Exemplar
     {
+        //Victor Rafael da Silva
         public string Titulo { get; set; }
         public string SubTitulo { get; set; }
         public string Escritor { get; set; }

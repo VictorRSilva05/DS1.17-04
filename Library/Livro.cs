@@ -1,5 +1,6 @@
 ﻿namespace Library
 {
+    //Victor Rafael da Silva
     internal class Livro : Exemplar
     {
         public int Paginas { get; set; }

@@ -2,6 +2,7 @@
 {
     internal class Hq
     {
+        //Victor Rafael da Silva
         public int Edicao { get; set; }
         public string Ilustrador { get; set; }
 

@@ -1,5 +1,6 @@
 ﻿namespace Library
 {
+    //Victor Rafael da Silva
     internal class Revista : Exemplar
     {
         public int Edicao {  get; set; }

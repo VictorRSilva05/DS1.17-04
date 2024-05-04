@@ -2,6 +2,7 @@
 {
     internal class Funcionario : Pessoa
     {
+        //Victor Rafael da Silva
         public int Cargo { get; set; }
         public decimal Salary { get; set; }
         public int CargaHoraria { get; set; }

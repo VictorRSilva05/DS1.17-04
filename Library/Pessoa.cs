@@ -1,5 +1,6 @@
 ﻿namespace Library
 {
+    //Victor Rafael da Silva
     public abstract class Pessoa
     {
         public string Nome { get; set; }
