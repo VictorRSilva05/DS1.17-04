@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            checkBox2 = new CheckBox();
+            checkBox1 = new CheckBox();
             panel3 = new Panel();
             label11 = new Label();
             comboBox1 = new ComboBox();
@@ -48,13 +50,11 @@
             label1 = new Label();
             panel2 = new Panel();
             numericUpDown2 = new NumericUpDown();
-            comboBox2 = new ComboBox();
+            textBox3 = new TextBox();
+            comboBoxCargo = new ComboBox();
             numericUpDown1 = new NumericUpDown();
             label9 = new Label();
             label8 = new Label();
-            textBox7 = new TextBox();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -87,7 +87,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(511, 699);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Font = new Font("Maplestory", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            checkBox2.Location = new Point(36, 479);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(93, 25);
+            checkBox2.TabIndex = 29;
+            checkBox2.Text = "Cliente";
+            checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Maplestory", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            checkBox1.Location = new Point(36, 274);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(134, 25);
+            checkBox1.TabIndex = 28;
+            checkBox1.Text = "Funcionário";
+            checkBox1.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -158,7 +179,6 @@
             label10.Size = new Size(118, 18);
             label10.TabIndex = 19;
             label10.Text = "Carga horária";
-            label10.Click += label10_Click;
             // 
             // label7
             // 
@@ -206,7 +226,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(328, 23);
             textBox2.TabIndex = 6;
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label3
             // 
@@ -234,7 +253,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(328, 23);
             textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -245,16 +263,15 @@
             label1.Size = new Size(375, 24);
             label1.TabIndex = 1;
             label1.Text = "Cadastro de clientes e funcionários";
-            label1.Click += label1_Click;
             // 
             // panel2
             // 
             panel2.Controls.Add(numericUpDown2);
-            panel2.Controls.Add(comboBox2);
+            panel2.Controls.Add(textBox3);
+            panel2.Controls.Add(comboBoxCargo);
             panel2.Controls.Add(numericUpDown1);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label8);
-            panel2.Controls.Add(textBox7);
             panel2.Location = new Point(36, 299);
             panel2.Name = "panel2";
             panel2.Size = new Size(414, 166);
@@ -262,18 +279,27 @@
             // 
             // numericUpDown2
             // 
-            numericUpDown2.Location = new Point(178, 92);
+            numericUpDown2.Location = new Point(178, 131);
             numericUpDown2.Name = "numericUpDown2";
             numericUpDown2.Size = new Size(120, 23);
-            numericUpDown2.TabIndex = 18;
+            numericUpDown2.TabIndex = 19;
             // 
-            // comboBox2
+            // textBox3
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(178, 48);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(120, 23);
-            comboBox2.TabIndex = 1;
+            textBox3.Location = new Point(178, 92);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(120, 23);
+            textBox3.TabIndex = 18;
+            // 
+            // comboBoxCargo
+            // 
+           
+            comboBoxCargo.FormattingEnabled = true;
+            comboBoxCargo.Location = new Point(178, 53);
+            comboBoxCargo.Name = "comboBoxCargo";
+            comboBoxCargo.Size = new Size(120, 23);
+            comboBoxCargo.TabIndex = 1;
+            comboBoxCargo.DataSource = Enum.GetValues(typeof(EnumFuncionarioCargo));
             // 
             // numericUpDown1
             // 
@@ -301,36 +327,6 @@
             label8.Size = new Size(60, 18);
             label8.TabIndex = 15;
             label8.Text = "Função";
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(178, 131);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(177, 23);
-            textBox7.TabIndex = 16;
-            textBox7.TextChanged += textBox7_TextChanged;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Maplestory", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(36, 274);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(134, 25);
-            checkBox1.TabIndex = 28;
-            checkBox1.Text = "Funcionário";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Font = new Font("Maplestory", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            checkBox2.Location = new Point(36, 479);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(93, 25);
-            checkBox2.TabIndex = 29;
-            checkBox2.Text = "Cliente";
-            checkBox2.UseVisualStyleBackColor = true;
             // 
             // FormCadastroPessoa
             // 
@@ -366,7 +362,6 @@
         private Label label7;
         private Label label10;
         private Label label9;
-        private TextBox textBox7;
         private Label label8;
         private Panel panel2;
         private Button button1;
@@ -376,10 +371,11 @@
         private Panel panel3;
         private Label label11;
         private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox comboBoxCargo;
         private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
+        private NumericUpDown numericUpDown2;
+        private TextBox textBox3;
     }
 }

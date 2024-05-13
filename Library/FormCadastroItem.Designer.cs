@@ -26,9 +26,14 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            comboBox4 = new ComboBox();
+            numericUpDown1 = new NumericUpDown();
+            comboBoxStatus = new ComboBox();
             button1 = new Button();
             tabControl1 = new TabControl();
             Livro = new TabPage();
@@ -43,7 +48,6 @@
             label13 = new Label();
             textBox7 = new TextBox();
             label11 = new Label();
-            textBox10 = new TextBox();
             label12 = new Label();
             tabPage3 = new TabPage();
             textBox12 = new TextBox();
@@ -56,6 +60,7 @@
             textBox15 = new TextBox();
             label17 = new Label();
             tabPage5 = new TabPage();
+            comboBoxTipo = new ComboBox();
             label18 = new Label();
             label7 = new Label();
             Genêro = new Label();
@@ -70,17 +75,14 @@
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             comboBox2 = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
-            comboBox3 = new ComboBox();
-            comboBox4 = new ComboBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             tabControl1.SuspendLayout();
             Livro.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
             tabPage4.SuspendLayout();
             tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -88,7 +90,7 @@
             panel1.BackColor = SystemColors.Control;
             panel1.Controls.Add(comboBox4);
             panel1.Controls.Add(numericUpDown1);
-            panel1.Controls.Add(comboBox2);
+            panel1.Controls.Add(comboBoxStatus);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(tabControl1);
             panel1.Controls.Add(label7);
@@ -108,7 +110,38 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(483, 718);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            // 
+            // comboBox4
+            // 
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Items.AddRange(new object[] { "Romance", "Novela", "Conto", "Crônica", "Poema", "Canção", "Drama histórico", "Teatro de vanguarda", "" });
+            comboBox4.Location = new Point(96, 346);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(161, 31);
+            comboBox4.TabIndex = 26;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(167, 302);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(120, 31);
+            numericUpDown1.TabIndex = 25;
+            // 
+            // comboBoxStatus
+            // 
+            comboBoxStatus.DataSource = new EnumExemplarStatus[]
+    {
+    EnumExemplarStatus.Pendente,
+    EnumExemplarStatus.Lido,
+    EnumExemplarStatus.Emprestado,
+    EnumExemplarStatus.Devolvido,
+    EnumExemplarStatus.Perdido
+    };
+            comboBoxStatus.FormattingEnabled = true;
+            comboBoxStatus.Location = new Point(96, 393);
+            comboBoxStatus.Name = "comboBoxStatus";
+            comboBoxStatus.Size = new Size(161, 31);
+            comboBoxStatus.TabIndex = 24;
             // 
             // button1
             // 
@@ -152,11 +185,12 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Comum", "Dura" });
+            comboBox1.Items.AddRange(new object[] { "Capa Dura", "Capa Flexível ou Brochura", "Capa de Papel Cartão", "Capa com Sobrecapa (Jacket) • Capa com Relevo", "Capa com Verniz UV", "Capa Metalizada", "Capa de Tecido", "Capa com Janela", "Capa Transparente" });
             comboBox1.Location = new Point(266, 26);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(108, 28);
             comboBox1.TabIndex = 18;
+            comboBox1.Text = "Comum";
             // 
             // textBox9
             // 
@@ -164,7 +198,6 @@
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(275, 27);
             textBox9.TabIndex = 16;
-            textBox9.TextChanged += textBox9_TextChanged;
             // 
             // label10
             // 
@@ -202,16 +235,15 @@
             label9.Size = new Size(67, 18);
             label9.TabIndex = 15;
             label9.Text = "Páginas";
-            label9.Click += label9_Click;
             // 
             // tabPage2
             // 
             tabPage2.BackColor = SystemColors.Control;
+            tabPage2.Controls.Add(comboBox2);
             tabPage2.Controls.Add(textBox11);
             tabPage2.Controls.Add(label13);
             tabPage2.Controls.Add(textBox7);
             tabPage2.Controls.Add(label11);
-            tabPage2.Controls.Add(textBox10);
             tabPage2.Controls.Add(label12);
             tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
@@ -231,7 +263,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(193, 23);
+            label13.Location = new Point(204, 27);
             label13.Name = "label13";
             label13.Size = new Size(78, 18);
             label13.TabIndex = 21;
@@ -254,13 +286,6 @@
             label11.Size = new Size(38, 18);
             label11.TabIndex = 17;
             label11.Text = "URL";
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(100, 25);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(87, 27);
-            textBox10.TabIndex = 20;
             // 
             // label12
             // 
@@ -350,7 +375,6 @@
             label16.Size = new Size(56, 18);
             label16.TabIndex = 29;
             label16.Text = "Edição";
-            label16.Click += label16_Click;
             // 
             // textBox15
             // 
@@ -372,7 +396,7 @@
             // tabPage5
             // 
             tabPage5.BackColor = SystemColors.Control;
-            tabPage5.Controls.Add(comboBox3);
+            tabPage5.Controls.Add(comboBoxTipo);
             tabPage5.Controls.Add(label18);
             tabPage5.Location = new Point(4, 29);
             tabPage5.Name = "tabPage5";
@@ -380,6 +404,30 @@
             tabPage5.Size = new Size(404, 150);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Genérico";
+            // 
+            // comboBoxTipo
+            // 
+            comboBoxTipo.DataSource = new EnumGenericoTipo[]
+    {
+    EnumGenericoTipo.Jornais,
+    EnumGenericoTipo.CalendariosAgendas,
+    EnumGenericoTipo.MapasAtlas,
+    EnumGenericoTipo.PostaisCartoesSaudacao,
+    EnumGenericoTipo.PapeisPresenteMaterialEmbalagem,
+    EnumGenericoTipo.DVDsBlurays,
+    EnumGenericoTipo.CDsVinis,
+    EnumGenericoTipo.K7,
+    EnumGenericoTipo.JogosTabuleiroQuebraCabecas,
+    EnumGenericoTipo.MaterialPapelariaEscritorio,
+    EnumGenericoTipo.ProdutosRelacionadosCulturaPop,
+    EnumGenericoTipo.Audiolivros,
+    EnumGenericoTipo.Outros
+    };
+            comboBoxTipo.FormattingEnabled = true;
+            comboBoxTipo.Location = new Point(92, 25);
+            comboBoxTipo.Name = "comboBoxTipo";
+            comboBoxTipo.Size = new Size(119, 28);
+            comboBoxTipo.TabIndex = 30;
             // 
             // label18
             // 
@@ -502,33 +550,11 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(96, 393);
+            comboBox2.Items.AddRange(new object[] { "Portable Document Format (PDF)", "Eletronic Publication (ePUB)", "Mobipocket (MOBI)", "Kindle Package Format (KPF)", "Outros" });
+            comboBox2.Location = new Point(100, 25);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(161, 31);
-            comboBox2.TabIndex = 24;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(167, 302);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 31);
-            numericUpDown1.TabIndex = 25;
-            // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(92, 25);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(119, 28);
-            comboBox3.TabIndex = 30;
-            // 
-            // comboBox4
-            // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(96, 346);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(161, 31);
-            comboBox4.TabIndex = 26;
+            comboBox2.Size = new Size(98, 28);
+            comboBox2.TabIndex = 23;
             // 
             // FormCadastroItem
             // 
@@ -541,6 +567,7 @@
             Text = "FormCadastroItem";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             tabControl1.ResumeLayout(false);
             Livro.ResumeLayout(false);
             Livro.PerformLayout();
@@ -552,7 +579,6 @@
             tabPage4.PerformLayout();
             tabPage5.ResumeLayout(false);
             tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
         }
 
@@ -587,7 +613,6 @@
         private Label label13;
         private TextBox textBox7;
         private Label label11;
-        private TextBox textBox10;
         private Label label12;
         private TextBox textBox12;
         private Label label14;
@@ -600,8 +625,9 @@
         private Label label18;
         private Button button1;
         private NumericUpDown numericUpDown1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private ComboBox comboBoxStatus;
+        private ComboBox comboBoxTipo;
         private ComboBox comboBox4;
+        private ComboBox comboBox2;
     }
 }
