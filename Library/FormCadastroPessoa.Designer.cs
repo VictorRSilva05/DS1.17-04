@@ -29,166 +29,219 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
-            panel3 = new Panel();
+            tabControlPessoa = new TabControl();
+            Leitor = new TabPage();
             label11 = new Label();
-            comboBox1 = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
-            maskedTextBox2 = new MaskedTextBox();
-            maskedTextBox1 = new MaskedTextBox();
-            button1 = new Button();
-            label10 = new Label();
+            listBoxTipoLeitor = new ListBox();
+            tabPage2 = new TabPage();
             label7 = new Label();
+            numericUpDownSalario = new NumericUpDown();
+            label10 = new Label();
+            comboBoxCargo = new ComboBox();
+            numericUpDownCargaHoraria = new NumericUpDown();
+            label9 = new Label();
+            label8 = new Label();
+            textBoxFuncao = new TextBox();
+            dateTimePickerNascimento = new DateTimePicker();
+            maskedTextBoxTelefone = new MaskedTextBox();
+            maskedTextBoxCpf = new MaskedTextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            textBox2 = new TextBox();
+            button1 = new Button();
+            textBoxEmail = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            textBoxNome = new TextBox();
             label1 = new Label();
-            panel2 = new Panel();
-            numericUpDown2 = new NumericUpDown();
-            textBox3 = new TextBox();
-            comboBoxCargo = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
-            label9 = new Label();
-            label8 = new Label();
             panel1.SuspendLayout();
-            panel3.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            tabControlPessoa.SuspendLayout();
+            Leitor.SuspendLayout();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownSalario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownCargaHoraria).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
-            panel1.Controls.Add(checkBox2);
-            panel1.Controls.Add(checkBox1);
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(dateTimePicker1);
-            panel1.Controls.Add(maskedTextBox2);
-            panel1.Controls.Add(maskedTextBox1);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(label7);
+            panel1.Controls.Add(tabControlPessoa);
+            panel1.Controls.Add(dateTimePickerNascimento);
+            panel1.Controls.Add(maskedTextBoxTelefone);
+            panel1.Controls.Add(maskedTextBoxCpf);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(textBoxEmail);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(textBoxNome);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(panel2);
             panel1.Location = new Point(-3, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(511, 699);
             panel1.TabIndex = 0;
             // 
-            // checkBox2
+            // tabControlPessoa
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Font = new Font("Maplestory", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            checkBox2.Location = new Point(36, 479);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(93, 25);
-            checkBox2.TabIndex = 29;
-            checkBox2.Text = "Cliente";
-            checkBox2.UseVisualStyleBackColor = true;
+            tabControlPessoa.Controls.Add(Leitor);
+            tabControlPessoa.Controls.Add(tabPage2);
+            tabControlPessoa.Location = new Point(23, 305);
+            tabControlPessoa.Name = "tabControlPessoa";
+            tabControlPessoa.SelectedIndex = 0;
+            tabControlPessoa.Size = new Size(466, 310);
+            tabControlPessoa.TabIndex = 26;
             // 
-            // checkBox1
+            // Leitor
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Maplestory", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(36, 274);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(134, 25);
-            checkBox1.TabIndex = 28;
-            checkBox1.Text = "Funcionário";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(label11);
-            panel3.Controls.Add(comboBox1);
-            panel3.Location = new Point(36, 510);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(414, 123);
-            panel3.TabIndex = 27;
+            Leitor.Controls.Add(label11);
+            Leitor.Controls.Add(listBoxTipoLeitor);
+            Leitor.Location = new Point(4, 24);
+            Leitor.Name = "Leitor";
+            Leitor.Padding = new Padding(3);
+            Leitor.Size = new Size(458, 282);
+            Leitor.TabIndex = 0;
+            Leitor.Text = "Leitor";
+            Leitor.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
-            label11.Location = new Point(12, 31);
+            label11.Location = new Point(9, 25);
             label11.Name = "label11";
-            label11.Size = new Size(42, 18);
-            label11.TabIndex = 28;
-            label11.Text = "Tipo";
+            label11.Size = new Size(112, 18);
+            label11.TabIndex = 27;
+            label11.Text = "Tipo de leitor";
             // 
-            // comboBox1
+            // listBoxTipoLeitor
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(66, 30);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 0;
+            listBoxTipoLeitor.FormattingEnabled = true;
+            listBoxTipoLeitor.ItemHeight = 15;
+            listBoxTipoLeitor.Location = new Point(9, 56);
+            listBoxTipoLeitor.Name = "listBoxTipoLeitor";
+            listBoxTipoLeitor.Size = new Size(427, 214);
+            listBoxTipoLeitor.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // tabPage2
             // 
-            dateTimePicker1.Location = new Point(250, 164);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 25;
-            // 
-            // maskedTextBox2
-            // 
-            maskedTextBox2.Location = new Point(123, 235);
-            maskedTextBox2.Mask = "(00) 00000-0000";
-            maskedTextBox2.Name = "maskedTextBox2";
-            maskedTextBox2.Size = new Size(100, 23);
-            maskedTextBox2.TabIndex = 24;
-            // 
-            // maskedTextBox1
-            // 
-            maskedTextBox1.Location = new Point(122, 201);
-            maskedTextBox1.Mask = "000.000.000-00";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(101, 23);
-            maskedTextBox1.TabIndex = 23;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(29, 639);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 41);
-            button1.TabIndex = 22;
-            button1.Text = "Enviar";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
-            label10.Location = new Point(48, 430);
-            label10.Name = "label10";
-            label10.Size = new Size(118, 18);
-            label10.TabIndex = 19;
-            label10.Text = "Carga horária";
+            tabPage2.Controls.Add(label7);
+            tabPage2.Controls.Add(numericUpDownSalario);
+            tabPage2.Controls.Add(label10);
+            tabPage2.Controls.Add(comboBoxCargo);
+            tabPage2.Controls.Add(numericUpDownCargaHoraria);
+            tabPage2.Controls.Add(label9);
+            tabPage2.Controls.Add(label8);
+            tabPage2.Controls.Add(textBoxFuncao);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(458, 282);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Funcionário";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
-            label7.Location = new Point(48, 310);
+            label7.Location = new Point(9, 63);
             label7.Name = "label7";
             label7.Size = new Size(62, 18);
             label7.TabIndex = 13;
             label7.Text = "Salário";
+            // 
+            // numericUpDownSalario
+            // 
+            numericUpDownSalario.Location = new Point(182, 63);
+            numericUpDownSalario.Name = "numericUpDownSalario";
+            numericUpDownSalario.Size = new Size(120, 23);
+            numericUpDownSalario.TabIndex = 20;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
+            label10.Location = new Point(9, 183);
+            label10.Name = "label10";
+            label10.Size = new Size(118, 18);
+            label10.TabIndex = 19;
+            label10.Text = "Carga horária";
+            label10.Click += label10_Click;
+            // 
+            // comboBoxCargo
+            // 
+            comboBoxCargo.DataSource = new EnumFuncionarioCargo[]
+    {
+    EnumFuncionarioCargo.Gerente,
+    EnumFuncionarioCargo.Atendente,
+    EnumFuncionarioCargo.Caixa,
+    EnumFuncionarioCargo.Estagiário
+    };
+            comboBoxCargo.FormattingEnabled = true;
+            comboBoxCargo.Items.AddRange(new object[] { EnumFuncionarioCargo.Gerente, EnumFuncionarioCargo.Atendente, EnumFuncionarioCargo.Caixa, EnumFuncionarioCargo.Estagiário });
+            comboBoxCargo.Location = new Point(182, 105);
+            comboBoxCargo.Name = "comboBoxCargo";
+            comboBoxCargo.Size = new Size(120, 23);
+            comboBoxCargo.TabIndex = 21;
+            // 
+            // numericUpDownCargaHoraria
+            // 
+            numericUpDownCargaHoraria.Location = new Point(182, 183);
+            numericUpDownCargaHoraria.Name = "numericUpDownCargaHoraria";
+            numericUpDownCargaHoraria.Size = new Size(120, 23);
+            numericUpDownCargaHoraria.TabIndex = 23;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
+            label9.Location = new Point(9, 105);
+            label9.Name = "label9";
+            label9.Size = new Size(56, 18);
+            label9.TabIndex = 17;
+            label9.Text = "Cargo";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
+            label8.Location = new Point(11, 144);
+            label8.Name = "label8";
+            label8.Size = new Size(60, 18);
+            label8.TabIndex = 15;
+            label8.Text = "Função";
+            // 
+            // textBoxFuncao
+            // 
+            textBoxFuncao.Location = new Point(182, 144);
+            textBoxFuncao.Name = "textBoxFuncao";
+            textBoxFuncao.Size = new Size(120, 23);
+            textBoxFuncao.TabIndex = 22;
+            // 
+            // dateTimePickerNascimento
+            // 
+            dateTimePickerNascimento.Location = new Point(250, 164);
+            dateTimePickerNascimento.Name = "dateTimePickerNascimento";
+            dateTimePickerNascimento.Size = new Size(200, 23);
+            dateTimePickerNascimento.TabIndex = 25;
+            // 
+            // maskedTextBoxTelefone
+            // 
+            maskedTextBoxTelefone.Location = new Point(123, 235);
+            maskedTextBoxTelefone.Mask = "(00) 00000-0000";
+            maskedTextBoxTelefone.Name = "maskedTextBoxTelefone";
+            maskedTextBoxTelefone.Size = new Size(100, 23);
+            maskedTextBoxTelefone.TabIndex = 24;
+            // 
+            // maskedTextBoxCpf
+            // 
+            maskedTextBoxCpf.Location = new Point(122, 201);
+            maskedTextBoxCpf.Mask = "000.000.000-00";
+            maskedTextBoxCpf.Name = "maskedTextBoxCpf";
+            maskedTextBoxCpf.Size = new Size(101, 23);
+            maskedTextBoxCpf.TabIndex = 23;
             // 
             // label6
             // 
@@ -220,12 +273,23 @@
             label4.TabIndex = 7;
             label4.Text = "Email";
             // 
-            // textBox2
+            // button1
             // 
-            textBox2.Location = new Point(122, 129);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(328, 23);
-            textBox2.TabIndex = 6;
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(23, 634);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 41);
+            button1.TabIndex = 22;
+            button1.Text = "Enviar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // textBoxEmail
+            // 
+            textBoxEmail.Location = new Point(122, 129);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(328, 23);
+            textBoxEmail.TabIndex = 6;
             // 
             // label3
             // 
@@ -247,12 +311,13 @@
             label2.TabIndex = 3;
             label2.Text = "Nome";
             // 
-            // textBox1
+            // textBoxNome
             // 
-            textBox1.Location = new Point(122, 88);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(328, 23);
-            textBox1.TabIndex = 2;
+            textBoxNome.Location = new Point(122, 88);
+            textBoxNome.Name = "textBoxNome";
+            textBoxNome.Size = new Size(328, 23);
+            textBoxNome.TabIndex = 2;
+            textBoxNome.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -264,87 +329,24 @@
             label1.TabIndex = 1;
             label1.Text = "Cadastro de clientes e funcionários";
             // 
-            // panel2
-            // 
-            panel2.Controls.Add(numericUpDown2);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(comboBoxCargo);
-            panel2.Controls.Add(numericUpDown1);
-            panel2.Controls.Add(label9);
-            panel2.Controls.Add(label8);
-            panel2.Location = new Point(36, 299);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(414, 166);
-            panel2.TabIndex = 20;
-            // 
-            // numericUpDown2
-            // 
-            numericUpDown2.Location = new Point(178, 131);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(120, 23);
-            numericUpDown2.TabIndex = 19;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(178, 92);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(120, 23);
-            textBox3.TabIndex = 18;
-            // 
-            // comboBoxCargo
-            // 
-           
-            comboBoxCargo.FormattingEnabled = true;
-            comboBoxCargo.Location = new Point(178, 53);
-            comboBoxCargo.Name = "comboBoxCargo";
-            comboBoxCargo.Size = new Size(120, 23);
-            comboBoxCargo.TabIndex = 1;
-            comboBoxCargo.DataSource = Enum.GetValues(typeof(EnumFuncionarioCargo));
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(178, 11);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 0;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
-            label9.Location = new Point(12, 53);
-            label9.Name = "label9";
-            label9.Size = new Size(56, 18);
-            label9.TabIndex = 17;
-            label9.Text = "Cargo";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
-            label8.Location = new Point(14, 92);
-            label8.Name = "label8";
-            label8.Size = new Size(60, 18);
-            label8.TabIndex = 15;
-            label8.Text = "Função";
-            // 
             // FormCadastroPessoa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
-            ClientSize = new Size(507, 714);
+            ClientSize = new Size(508, 704);
             Controls.Add(panel1);
             Name = "FormCadastroPessoa";
             Text = "FormCadastroPessoa";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            tabControlPessoa.ResumeLayout(false);
+            Leitor.ResumeLayout(false);
+            Leitor.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownSalario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownCargaHoraria).EndInit();
             ResumeLayout(false);
         }
 
@@ -352,30 +354,29 @@
 
         private Panel panel1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox textBoxNome;
         private Label label2;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox textBoxEmail;
         private Label label3;
         private Label label6;
         private Label label5;
         private Label label7;
         private Label label10;
-        private Label label9;
-        private Label label8;
-        private Panel panel2;
         private Button button1;
-        private DateTimePicker dateTimePicker1;
-        private MaskedTextBox maskedTextBox2;
-        private MaskedTextBox maskedTextBox1;
-        private Panel panel3;
+        private DateTimePicker dateTimePickerNascimento;
+        private MaskedTextBox maskedTextBoxTelefone;
+        private MaskedTextBox maskedTextBoxCpf;
+        private TabControl tabControlPessoa;
+        private TabPage Leitor;
+        private TabPage tabPage2;
+        private Label label8;
+        private Label label9;
         private Label label11;
-        private ComboBox comboBox1;
+        private ListBox listBoxTipoLeitor;
+        private NumericUpDown numericUpDownSalario;
         private ComboBox comboBoxCargo;
-        private NumericUpDown numericUpDown1;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private NumericUpDown numericUpDown2;
-        private TextBox textBox3;
+        private NumericUpDown numericUpDownCargaHoraria;
+        private TextBox textBoxFuncao;
     }
 }

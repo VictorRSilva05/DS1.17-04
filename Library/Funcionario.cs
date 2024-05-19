@@ -1,6 +1,6 @@
 ﻿namespace Library
 {
-    internal class Funcionario : Pessoa
+     public class Funcionario : Pessoa
     {
         //Victor Rafael da Silva
         public int Cargo { get; set; }

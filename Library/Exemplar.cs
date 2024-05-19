@@ -11,5 +11,15 @@
         public string Genero { get; set; }
         public int Status { get; set; }
 
+        protected Exemplar(string titulo, string subTitulo, string escritor, string editora, int anoPublicacao, string genero, int status)
+        {
+            Titulo = titulo;
+            SubTitulo = subTitulo;
+            Escritor = escritor;
+            Editora = editora;
+            AnoPublicacao = anoPublicacao;
+            Genero = genero;
+            Status = status;
+        }
     }
 }

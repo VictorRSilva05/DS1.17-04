@@ -7,10 +7,15 @@
         public List<Emprestimo> EmprestimosLeitor { get; set; }
         public string Tipo { get; set; }
 
-        public Leitor(String nome, DateTime nascimento, string cpf, string email, string telefone,List<Exemplar> exemplaresLeitor, List<Emprestimo> emprestimosLeitor, string tipo) : base(nome, nascimento, cpf, email, telefone)
+        public Leitor(String nome, DateTime nascimento, string cpf, string email, string telefone, List<Exemplar> exemplaresLeitor, List<Emprestimo> emprestimosLeitor, string tipo) : base(nome, nascimento, cpf, email, telefone)
         {
             ExemplaresLeitor = exemplaresLeitor;
             EmprestimosLeitor = emprestimosLeitor;
+            Tipo = tipo;
+        }
+
+        public Leitor(string nome, DateTime nascimento,string cpf, string email, string telefone,string tipo) : base (nome, nascimento, cpf, email, telefone)
+        {
             Tipo = tipo;
         }
 
