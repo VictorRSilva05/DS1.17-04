@@ -20,6 +20,7 @@ namespace Library
             FormCadastroPessoa cli = new FormCadastroPessoa(funcionarios, leitores);
             cli.StartPosition = FormStartPosition.CenterParent;
             cli.ShowDialog();
+            AtualizarDataGridView();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -27,6 +28,7 @@ namespace Library
             FormCadastroItem cli = new FormCadastroItem(exemplares);
             cli.StartPosition = FormStartPosition.CenterParent;
             cli.ShowDialog();
+            AtualizarDataGridView();
         }
 
         private void label2_Click(object sender, EventArgs e)

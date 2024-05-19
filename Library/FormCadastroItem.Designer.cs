@@ -142,11 +142,10 @@
     EnumExemplarStatus.Perdido
     };
             comboBoxStatus.FormattingEnabled = true;
-            comboBoxStatus.Items.AddRange(new object[] { EnumExemplarStatus.Pendente, EnumExemplarStatus.Lido, EnumExemplarStatus.Emprestado, EnumExemplarStatus.Devolvido, EnumExemplarStatus.Perdido });
-            comboBoxStatus.Location = new Point(105, 297);
             comboBoxStatus.Name = "comboBoxStatus";
             comboBoxStatus.Size = new Size(161, 31);
             comboBoxStatus.TabIndex = 24;
+            comboBoxStatus.DataSource = Enum.GetValues(typeof(EnumExemplarStatus));
             // 
             // button1
             // 
@@ -168,7 +167,7 @@
             tabControlExemplar.Location = new Point(19, 350);
             tabControlExemplar.Name = "tabControlExemplar";
             tabControlExemplar.SelectedIndex = 0;
-            tabControlExemplar.Size = new Size(412, 280);
+            tabControlExemplar.Size = new Size(436, 280);
             tabControlExemplar.TabIndex = 1;
             // 
             // Livro
@@ -190,7 +189,7 @@
             Livro.Location = new Point(4, 29);
             Livro.Name = "Livro";
             Livro.Padding = new Padding(3);
-            Livro.Size = new Size(404, 247);
+            Livro.Size = new Size(428, 247);
             Livro.TabIndex = 0;
             Livro.Text = "Livro";
             // 
@@ -216,7 +215,7 @@
             // 
             numericUpDownTamanho.Location = new Point(287, 162);
             numericUpDownTamanho.Name = "numericUpDownTamanho";
-            numericUpDownTamanho.Size = new Size(87, 27);
+            numericUpDownTamanho.Size = new Size(111, 27);
             numericUpDownTamanho.TabIndex = 27;
             // 
             // comboBoxFormato
@@ -252,7 +251,7 @@
             // 
             textBoxUrl.Location = new Point(99, 204);
             textBoxUrl.Name = "textBoxUrl";
-            textBoxUrl.Size = new Size(275, 27);
+            textBoxUrl.Size = new Size(299, 27);
             textBoxUrl.TabIndex = 21;
             // 
             // label11
@@ -271,7 +270,7 @@
             comboBoxTipoCapa.Items.AddRange(new object[] { "Capa Dura", "Capa Flexível ou Brochura", "Capa de Papel Cartão", "Capa com Sobrecapa (Jacket) • Capa com Relevo", "Capa com Verniz UV", "Capa Metalizada", "Capa de Tecido", "Capa com Janela", "Capa Transparente" });
             comboBoxTipoCapa.Location = new Point(266, 26);
             comboBoxTipoCapa.Name = "comboBoxTipoCapa";
-            comboBoxTipoCapa.Size = new Size(108, 28);
+            comboBoxTipoCapa.Size = new Size(132, 28);
             comboBoxTipoCapa.TabIndex = 18;
             comboBoxTipoCapa.Text = "Comum";
             // 
@@ -279,7 +278,7 @@
             // 
             textBoxIsbn.Location = new Point(99, 78);
             textBoxIsbn.Name = "textBoxIsbn";
-            textBoxIsbn.Size = new Size(275, 27);
+            textBoxIsbn.Size = new Size(299, 27);
             textBoxIsbn.TabIndex = 16;
             // 
             // label10
@@ -439,11 +438,11 @@
     EnumGenericoTipo.Outros
     };
             comboBoxTipo.FormattingEnabled = true;
-            comboBoxTipo.Items.AddRange(new object[] { EnumGenericoTipo.Jornais, EnumGenericoTipo.CalendariosAgendas, EnumGenericoTipo.MapasAtlas, EnumGenericoTipo.PostaisCartoesSaudacao, EnumGenericoTipo.PapeisPresenteMaterialEmbalagem, EnumGenericoTipo.DVDsBlurays, EnumGenericoTipo.CDsVinis, EnumGenericoTipo.K7, EnumGenericoTipo.JogosTabuleiroQuebraCabecas, EnumGenericoTipo.MaterialPapelariaEscritorio, EnumGenericoTipo.ProdutosRelacionadosCulturaPop, EnumGenericoTipo.Audiolivros, EnumGenericoTipo.Outros });
-            comboBoxTipo.Location = new Point(73, 28);
+            comboBoxTipo.Location = new Point(0, 0);
             comboBoxTipo.Name = "comboBoxTipo";
             comboBoxTipo.Size = new Size(119, 28);
             comboBoxTipo.TabIndex = 30;
+            comboBoxTipo.DataSource = Enum.GetValues(typeof(EnumGenericoTipo));
             // 
             // label18
             // 

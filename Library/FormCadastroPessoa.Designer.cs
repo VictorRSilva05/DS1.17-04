@@ -119,6 +119,7 @@
             // 
             listBoxTipoLeitor.FormattingEnabled = true;
             listBoxTipoLeitor.ItemHeight = 15;
+            listBoxTipoLeitor.Items.AddRange(new object[] { "Leitor voraz", "Leitor de fim de semana", "Leitor casual", "Leitor de um gênero específico", "Leitor de e-books", "Leitor de audiolivros", "Leitor crítico", "Leitor acadêmico", "Leitor nostálgico", "Leitor de bestsellers", "Leitor de clássicos", "Leitor de não-ficção", "Leitor multitarefa", "Leitor de ficção científica", "Leitor de fantasia", "Leitor de mistério", "Leitor de romance", "Leitor de biografias", "Leitor de poesia", "Leitor de autoajuda" });
             listBoxTipoLeitor.Location = new Point(9, 56);
             listBoxTipoLeitor.Name = "listBoxTipoLeitor";
             listBoxTipoLeitor.Size = new Size(427, 214);
@@ -180,11 +181,11 @@
     EnumFuncionarioCargo.Estagiário
     };
             comboBoxCargo.FormattingEnabled = true;
-            comboBoxCargo.Items.AddRange(new object[] { EnumFuncionarioCargo.Gerente, EnumFuncionarioCargo.Atendente, EnumFuncionarioCargo.Caixa, EnumFuncionarioCargo.Estagiário });
             comboBoxCargo.Location = new Point(182, 105);
             comboBoxCargo.Name = "comboBoxCargo";
             comboBoxCargo.Size = new Size(120, 23);
             comboBoxCargo.TabIndex = 21;
+            comboBoxCargo.DataSource = Enum.GetValues(typeof(EnumFuncionarioCargo));            
             // 
             // numericUpDownCargaHoraria
             // 
