@@ -156,6 +156,7 @@
             // numericUpDownSalario
             // 
             numericUpDownSalario.Location = new Point(182, 63);
+            numericUpDownSalario.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             numericUpDownSalario.Name = "numericUpDownSalario";
             numericUpDownSalario.Size = new Size(120, 23);
             numericUpDownSalario.TabIndex = 20;
@@ -185,11 +186,12 @@
             comboBoxCargo.Name = "comboBoxCargo";
             comboBoxCargo.Size = new Size(120, 23);
             comboBoxCargo.TabIndex = 21;
-            comboBoxCargo.DataSource = Enum.GetValues(typeof(EnumFuncionarioCargo));            
+            comboBoxCargo.DataSource = Enum.GetValues(typeof(EnumFuncionarioCargo));
             // 
             // numericUpDownCargaHoraria
             // 
             numericUpDownCargaHoraria.Location = new Point(182, 183);
+            numericUpDownCargaHoraria.Maximum = new decimal(new int[] { 12, 0, 0, 0 });
             numericUpDownCargaHoraria.Name = "numericUpDownCargaHoraria";
             numericUpDownCargaHoraria.Size = new Size(120, 23);
             numericUpDownCargaHoraria.TabIndex = 23;

@@ -127,6 +127,7 @@
             // numericUpDownAnoPublicacao
             // 
             numericUpDownAnoPublicacao.Location = new Point(176, 206);
+            numericUpDownAnoPublicacao.Maximum = new decimal(new int[] { 3000, 0, 0, 0 });
             numericUpDownAnoPublicacao.Name = "numericUpDownAnoPublicacao";
             numericUpDownAnoPublicacao.Size = new Size(120, 31);
             numericUpDownAnoPublicacao.TabIndex = 25;
@@ -142,6 +143,7 @@
     EnumExemplarStatus.Perdido
     };
             comboBoxStatus.FormattingEnabled = true;
+            comboBoxStatus.Location = new Point(105, 296);
             comboBoxStatus.Name = "comboBoxStatus";
             comboBoxStatus.Size = new Size(161, 31);
             comboBoxStatus.TabIndex = 24;
@@ -207,6 +209,7 @@
             // numericUpDownPaginasLivro
             // 
             numericUpDownPaginasLivro.Location = new Point(99, 27);
+            numericUpDownPaginasLivro.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
             numericUpDownPaginasLivro.Name = "numericUpDownPaginasLivro";
             numericUpDownPaginasLivro.Size = new Size(99, 27);
             numericUpDownPaginasLivro.TabIndex = 29;
@@ -214,6 +217,7 @@
             // numericUpDownTamanho
             // 
             numericUpDownTamanho.Location = new Point(287, 162);
+            numericUpDownTamanho.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             numericUpDownTamanho.Name = "numericUpDownTamanho";
             numericUpDownTamanho.Size = new Size(111, 27);
             numericUpDownTamanho.TabIndex = 27;
@@ -321,7 +325,7 @@
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(404, 247);
+            tabPage3.Size = new Size(428, 247);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Hq";
             // 
@@ -369,7 +373,7 @@
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(404, 247);
+            tabPage4.Size = new Size(428, 247);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Revista";
             // 
@@ -415,7 +419,7 @@
             tabPage5.Location = new Point(4, 29);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(404, 247);
+            tabPage5.Size = new Size(428, 247);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Genérico";
             // 
@@ -438,7 +442,7 @@
     EnumGenericoTipo.Outros
     };
             comboBoxTipo.FormattingEnabled = true;
-            comboBoxTipo.Location = new Point(0, 0);
+            comboBoxTipo.Location = new Point(70, 28);
             comboBoxTipo.Name = "comboBoxTipo";
             comboBoxTipo.Size = new Size(119, 28);
             comboBoxTipo.TabIndex = 30;

@@ -76,6 +76,8 @@ namespace Library
                 // cria o objeto e já adiciona no List
                 exemplares.Add(new Generico(auxTitulo, auxSubTitulo, auxEscritor, auxEditora, auxAnoPublicacao, auxGenero, auxStatus, auxTipo));
             }
+            MessageBox.Show("Pessoa cadastrada com sucesso!");
+            Close();
         }
     }
 
