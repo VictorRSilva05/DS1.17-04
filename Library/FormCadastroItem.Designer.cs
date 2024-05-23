@@ -38,13 +38,14 @@
             tabControlExemplar = new TabControl();
             Livro = new TabPage();
             checkBoxEbook = new CheckBox();
-            numericUpDownPaginasLivro = new NumericUpDown();
+            panelEbook = new Panel();
+            label12 = new Label();
             numericUpDownTamanho = new NumericUpDown();
+            textBoxUrl = new TextBox();
             comboBoxFormato = new ComboBox();
             label13 = new Label();
-            label12 = new Label();
-            textBoxUrl = new TextBox();
             label11 = new Label();
+            numericUpDownPaginasLivro = new NumericUpDown();
             comboBoxTipoCapa = new ComboBox();
             textBoxIsbn = new TextBox();
             label10 = new Label();
@@ -79,8 +80,9 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDownAnoPublicacao).BeginInit();
             tabControlExemplar.SuspendLayout();
             Livro.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownPaginasLivro).BeginInit();
+            panelEbook.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownTamanho).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPaginasLivro).BeginInit();
             tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownEdicaoHq).BeginInit();
             tabPage4.SuspendLayout();
@@ -176,13 +178,8 @@
             // 
             Livro.BackColor = SystemColors.Control;
             Livro.Controls.Add(checkBoxEbook);
+            Livro.Controls.Add(panelEbook);
             Livro.Controls.Add(numericUpDownPaginasLivro);
-            Livro.Controls.Add(numericUpDownTamanho);
-            Livro.Controls.Add(comboBoxFormato);
-            Livro.Controls.Add(label13);
-            Livro.Controls.Add(label12);
-            Livro.Controls.Add(textBoxUrl);
-            Livro.Controls.Add(label11);
             Livro.Controls.Add(comboBoxTipoCapa);
             Livro.Controls.Add(textBoxIsbn);
             Livro.Controls.Add(label10);
@@ -199,34 +196,57 @@
             // 
             checkBoxEbook.AutoSize = true;
             checkBoxEbook.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            checkBoxEbook.Location = new Point(20, 123);
+            checkBoxEbook.Location = new Point(11, 126);
             checkBoxEbook.Name = "checkBoxEbook";
             checkBoxEbook.Size = new Size(76, 22);
             checkBoxEbook.TabIndex = 30;
             checkBoxEbook.Text = "Ebook";
             checkBoxEbook.UseVisualStyleBackColor = true;
+            checkBoxEbook.CheckedChanged += checkBoxEbook_CheckedChanged;
             // 
-            // numericUpDownPaginasLivro
+            // panelEbook
             // 
-            numericUpDownPaginasLivro.Location = new Point(99, 27);
-            numericUpDownPaginasLivro.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
-            numericUpDownPaginasLivro.Name = "numericUpDownPaginasLivro";
-            numericUpDownPaginasLivro.Size = new Size(99, 27);
-            numericUpDownPaginasLivro.TabIndex = 29;
+            panelEbook.Controls.Add(label12);
+            panelEbook.Controls.Add(numericUpDownTamanho);
+            panelEbook.Controls.Add(textBoxUrl);
+            panelEbook.Controls.Add(comboBoxFormato);
+            panelEbook.Controls.Add(label13);
+            panelEbook.Controls.Add(label11);
+            panelEbook.Location = new Point(5, 154);
+            panelEbook.Name = "panelEbook";
+            panelEbook.Size = new Size(417, 87);
+            panelEbook.TabIndex = 30;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
+            label12.Location = new Point(15, 16);
+            label12.Name = "label12";
+            label12.Size = new Size(75, 18);
+            label12.TabIndex = 24;
+            label12.Text = "Formato";
             // 
             // numericUpDownTamanho
             // 
-            numericUpDownTamanho.Location = new Point(287, 162);
+            numericUpDownTamanho.Location = new Point(282, 15);
             numericUpDownTamanho.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             numericUpDownTamanho.Name = "numericUpDownTamanho";
             numericUpDownTamanho.Size = new Size(111, 27);
             numericUpDownTamanho.TabIndex = 27;
             // 
+            // textBoxUrl
+            // 
+            textBoxUrl.Location = new Point(94, 57);
+            textBoxUrl.Name = "textBoxUrl";
+            textBoxUrl.Size = new Size(299, 27);
+            textBoxUrl.TabIndex = 21;
+            // 
             // comboBoxFormato
             // 
             comboBoxFormato.FormattingEnabled = true;
             comboBoxFormato.Items.AddRange(new object[] { "Portable Document Format (PDF)", "Eletronic Publication (ePUB)", "Mobipocket (MOBI)", "Kindle Package Format (KPF)", "Outros" });
-            comboBoxFormato.Location = new Point(99, 163);
+            comboBoxFormato.Location = new Point(94, 16);
             comboBoxFormato.Name = "comboBoxFormato";
             comboBoxFormato.Size = new Size(98, 28);
             comboBoxFormato.TabIndex = 26;
@@ -235,38 +255,29 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(203, 165);
+            label13.Location = new Point(198, 18);
             label13.Name = "label13";
             label13.Size = new Size(78, 18);
             label13.TabIndex = 25;
             label13.Text = "Tamanho";
             // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
-            label12.Location = new Point(20, 163);
-            label12.Name = "label12";
-            label12.Size = new Size(75, 18);
-            label12.TabIndex = 24;
-            label12.Text = "Formato";
-            // 
-            // textBoxUrl
-            // 
-            textBoxUrl.Location = new Point(99, 204);
-            textBoxUrl.Name = "textBoxUrl";
-            textBoxUrl.Size = new Size(299, 27);
-            textBoxUrl.TabIndex = 21;
-            // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Maplestory", 11.9999981F, FontStyle.Bold);
-            label11.Location = new Point(20, 206);
+            label11.Location = new Point(15, 59);
             label11.Name = "label11";
             label11.Size = new Size(38, 18);
             label11.TabIndex = 20;
             label11.Text = "URL";
+            // 
+            // numericUpDownPaginasLivro
+            // 
+            numericUpDownPaginasLivro.Location = new Point(99, 27);
+            numericUpDownPaginasLivro.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
+            numericUpDownPaginasLivro.Name = "numericUpDownPaginasLivro";
+            numericUpDownPaginasLivro.Size = new Size(99, 27);
+            numericUpDownPaginasLivro.TabIndex = 29;
             // 
             // comboBoxTipoCapa
             // 
@@ -571,7 +582,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(481, 716);
+            ClientSize = new Size(863, 716);
             Controls.Add(panel1);
             Name = "FormCadastroItem";
             Text = "FormCadastroItem";
@@ -581,8 +592,10 @@
             tabControlExemplar.ResumeLayout(false);
             Livro.ResumeLayout(false);
             Livro.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownPaginasLivro).EndInit();
+            panelEbook.ResumeLayout(false);
+            panelEbook.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownTamanho).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownPaginasLivro).EndInit();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDownEdicaoHq).EndInit();
@@ -642,5 +655,6 @@
         private NumericUpDown numericUpDownEdicaoRevista;
         private NumericUpDown numericUpDownPaginasRevista;
         private NumericUpDown numericUpDownEdicaoHq;
+        private Panel panelEbook;
     }
 }

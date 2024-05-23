@@ -9,6 +9,7 @@ namespace Library
         {
             InitializeComponent();
             this.exemplares = exemplares;
+            panelEbook.Enabled = false;
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -78,6 +79,11 @@ namespace Library
             }
             MessageBox.Show("Pessoa cadastrada com sucesso!");
             Close();
+        }
+
+        private void checkBoxEbook_CheckedChanged(object sender, EventArgs e)
+        {
+            panelEbook.Enabled = checkBoxEbook.Checked;
         }
     }
 
