@@ -14,6 +14,7 @@ namespace Library
     {
         List<Funcionario> funcionarios;
         List<Leitor> leitores;
+        Funcionario funcionario;
         public FormCadastroPessoa(List<Funcionario> funcionarios, List<Leitor> leitores)
         {
             InitializeComponent();
@@ -21,6 +22,31 @@ namespace Library
             this.leitores = leitores;
         }
 
+        // sobrecarga de construtor, novo construtor com lista de parâmetros diferente
+        public FormCadastroPessoa(List<Funcionario> funcionarios, Funcionario funcionario)
+        {
+            InitializeComponent();
+            // atribui o objeto recebido à variável com escopo de classe
+            this.funcionario = funcionario;
+            this.funcionarios = funcionarios;
+            // carrega os valores do Enum para o combobox
+            comboBoxCargo.DataSource = Enum.GetValues(typeof(EnumFuncionarioCargo));
+            comboBoxCargo.SelectedIndex = 0;
+            // carrega os valores do objeto recebido
+            textBoxNome.Text = funcionario.Nome;
+            dateTimePickerNascimento.Value = funcionario.Nascimento;
+            maskedTextBoxCpf.Text = funcionario.Cpf;
+            textBoxEmail.Text = funcionario.Email;
+            maskedTextBoxTelefone.Text = funcionario.Telefone;
+            comboBoxCargo.Text = "" + (EnumFuncionarioCargo)Enum.Parse(typeof(EnumFuncionarioCargo), funcionario.Cargo.ToString());
+            numericUpDownSalario.Value = funcionario.Salary;
+            numericUpDownCargaHoraria.Value = funcionario.CargaHoraria;
+            textBoxFuncao.Text = funcionario.Funcao;
+            // ajusta a tab e botões
+            tabControlPessoa.SelectedIndex = 1;
+            tabControlPessoa.TabPages[0].Enabled = false;
+            buttonSalvar.Enabled = false;
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -60,6 +86,47 @@ namespace Library
                 funcionarios.Add(new Funcionario(auxNome, auxData, auxCpf, auxEmail, auxTelefone, auxCargo, auxSalario, auxCargaHoraria, auxFuncao));
             }
             MessageBox.Show("Pessoa cadastrada com sucesso!");
+            Close();
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            if (tabControlPessoa.SelectedIndex == 0)
+            {
+                // atualiza os dados no objeto
+                // para uso futuro, edição de leitor
+            }
+            else
+            {
+                // atualiza os dados no objeto
+                funcionario.Nome = textBoxNome.Text;
+                funcionario.Nascimento = dateTimePickerNascimento.Value;
+                funcionario.Cpf = maskedTextBoxCpf.Text;
+                funcionario.Email = textBoxEmail.Text;
+                funcionario.Telefone = maskedTextBoxTelefone.Text;
+                funcionario.Cargo = (int)(EnumFuncionarioCargo)Enum.Parse(typeof(EnumFuncionarioCargo),
+                comboBoxCargo.Text);
+                funcionario.Salary = numericUpDownSalario.Value;
+                funcionario.CargaHoraria = Convert.ToInt32(numericUpDownCargaHoraria.Value);
+                funcionario.Funcao = textBoxFuncao.Text;
+            }
+            MessageBox.Show("Pessoa editada com sucesso!");
+            Close();
+        }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            if (tabControlPessoa.SelectedIndex == 0)
+            {
+                // exclui o objeto, Leitor
+                // uso futuro
+            }
+            else
+            {
+                // exclui o objeto
+                funcionarios.Remove(funcionario);
+            }
+            MessageBox.Show("Pessoa excluída com sucesso!");
             Close();
         }
     }

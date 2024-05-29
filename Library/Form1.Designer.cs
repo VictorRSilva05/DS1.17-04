@@ -158,6 +158,7 @@
             dataGridViewFuncionarios.Name = "dataGridViewFuncionarios";
             dataGridViewFuncionarios.Size = new Size(660, 323);
             dataGridViewFuncionarios.TabIndex = 0;
+            dataGridViewFuncionarios.MouseDoubleClick += dataGridViewFuncionarios_MouseDoubleClick;
             // 
             // tabPage2
             // 

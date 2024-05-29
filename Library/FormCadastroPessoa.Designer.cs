@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            buttonEditar = new Button();
+            buttonExcluir = new Button();
             tabControlPessoa = new TabControl();
             Leitor = new TabPage();
             label11 = new Label();
@@ -48,7 +50,7 @@
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            button1 = new Button();
+            buttonSalvar = new Button();
             textBoxEmail = new TextBox();
             label3 = new Label();
             label2 = new Label();
@@ -65,6 +67,8 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(buttonEditar);
+            panel1.Controls.Add(buttonExcluir);
             panel1.Controls.Add(tabControlPessoa);
             panel1.Controls.Add(dateTimePickerNascimento);
             panel1.Controls.Add(maskedTextBoxTelefone);
@@ -72,7 +76,7 @@
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(buttonSalvar);
             panel1.Controls.Add(textBoxEmail);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
@@ -82,6 +86,30 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(511, 699);
             panel1.TabIndex = 0;
+            // 
+            // buttonEditar
+            // 
+            buttonEditar.BackColor = Color.Yellow;
+            buttonEditar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonEditar.Location = new Point(304, 634);
+            buttonEditar.Name = "buttonEditar";
+            buttonEditar.Size = new Size(75, 41);
+            buttonEditar.TabIndex = 28;
+            buttonEditar.Text = "Editar";
+            buttonEditar.UseVisualStyleBackColor = false;
+            buttonEditar.Click += buttonEditar_Click;
+            // 
+            // buttonExcluir
+            // 
+            buttonExcluir.BackColor = Color.Red;
+            buttonExcluir.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonExcluir.Location = new Point(385, 634);
+            buttonExcluir.Name = "buttonExcluir";
+            buttonExcluir.Size = new Size(89, 41);
+            buttonExcluir.TabIndex = 27;
+            buttonExcluir.Text = "Excluir";
+            buttonExcluir.UseVisualStyleBackColor = false;
+            buttonExcluir.Click += buttonExcluir_Click;
             // 
             // tabControlPessoa
             // 
@@ -276,16 +304,17 @@
             label4.TabIndex = 7;
             label4.Text = "Email";
             // 
-            // button1
+            // buttonSalvar
             // 
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(23, 634);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 41);
-            button1.TabIndex = 22;
-            button1.Text = "Enviar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            buttonSalvar.BackColor = Color.Green;
+            buttonSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSalvar.Location = new Point(23, 634);
+            buttonSalvar.Name = "buttonSalvar";
+            buttonSalvar.Size = new Size(75, 41);
+            buttonSalvar.TabIndex = 22;
+            buttonSalvar.Text = "Salvar";
+            buttonSalvar.UseVisualStyleBackColor = false;
+            buttonSalvar.Click += button1_Click;
             // 
             // textBoxEmail
             // 
@@ -366,7 +395,7 @@
         private Label label5;
         private Label label7;
         private Label label10;
-        private Button button1;
+        private Button buttonSalvar;
         private DateTimePicker dateTimePickerNascimento;
         private MaskedTextBox maskedTextBoxTelefone;
         private MaskedTextBox maskedTextBoxCpf;
@@ -381,5 +410,7 @@
         private ComboBox comboBoxCargo;
         private NumericUpDown numericUpDownCargaHoraria;
         private TextBox textBoxFuncao;
+        private Button buttonEditar;
+        private Button buttonExcluir;
     }
 }

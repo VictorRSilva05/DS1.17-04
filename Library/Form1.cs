@@ -31,6 +31,7 @@ namespace Library
             AtualizarDataGridView();
         }
 
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -86,6 +87,21 @@ namespace Library
             // listar exemplares no datagridview
             dataGridViewExemplares.DataSource = null;
             dataGridViewExemplares.DataSource = exemplares;
+        }
+
+        private void dataGridViewFuncionarios_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            // armazena o objeto selecionado
+            var funcionario = dataGridViewFuncionarios.CurrentRow.DataBoundItem as Funcionario;
+            // como teste, mostra o tipo do objeto e o nome do funcionário
+            MessageBox.Show($"{funcionario.GetType().Name}, {funcionario.Nome}");
+            // continuaremos a implementação aqui...
+            // abre a tela de funcionário, utilizando o construtor criado para edição
+            var form = new FormCadastroPessoa(funcionarios, funcionario);
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
+            // atualiza a tela, ao fechar a tela de edição
+            AtualizarDataGridView();
         }
     }
 }
