@@ -103,5 +103,16 @@ namespace Library
             // atualiza a tela, ao fechar a tela de edição
             AtualizarDataGridView();
         }
+
+        private void dataGridViewLeitores_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            var leitor = dataGridViewLeitores.CurrentRow.DataBoundItem as Leitor;
+            MessageBox.Show($"{leitor.GetType().Name}, {leitor.Nome}");
+            var form = new FormCadastroPessoa(leitores, leitor);
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
+            // atualiza a tela, ao fechar a tela de edição
+            AtualizarDataGridView();
+        }
     }
 }

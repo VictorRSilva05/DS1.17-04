@@ -15,6 +15,7 @@ namespace Library
         List<Funcionario> funcionarios;
         List<Leitor> leitores;
         Funcionario funcionario;
+        Leitor leitor;
         public FormCadastroPessoa(List<Funcionario> funcionarios, List<Leitor> leitores)
         {
             InitializeComponent();
@@ -45,6 +46,26 @@ namespace Library
             // ajusta a tab e botões
             tabControlPessoa.SelectedIndex = 1;
             tabControlPessoa.TabPages[0].Enabled = false;
+            buttonSalvar.Enabled = false;
+        }
+
+        // sobrecarga de construtor, novo construtor com lista de parâmetros diferente
+        public FormCadastroPessoa(List<Leitor> leitores, Leitor leitor)
+        {
+            InitializeComponent();
+            // atribui o objeto recebido à variável com escopo de classe
+            this.leitor = leitor;
+            this.leitores = leitores;
+            // carrega os valores do objeto recebido
+            textBoxNome.Text = leitor.Nome;
+            dateTimePickerNascimento.Value = leitor.Nascimento;
+            maskedTextBoxCpf.Text = leitor.Cpf;
+            textBoxEmail.Text = leitor.Email;
+            maskedTextBoxTelefone.Text = leitor.Telefone;
+            listBoxTipoLeitor.Text = leitor.Tipo;
+            // ajusta a tab e botões
+            tabControlPessoa.SelectedIndex = 0;
+            tabControlPessoa.TabPages[1].Enabled = false;
             buttonSalvar.Enabled = false;
         }
 
@@ -95,6 +116,13 @@ namespace Library
             {
                 // atualiza os dados no objeto
                 // para uso futuro, edição de leitor
+                // atualiza os dados no objeto
+                leitor.Nome = textBoxNome.Text;
+                leitor.Nascimento = dateTimePickerNascimento.Value;
+                leitor.Cpf = maskedTextBoxCpf.Text;
+                leitor.Email = textBoxEmail.Text;
+                leitor.Telefone = maskedTextBoxTelefone.Text;
+                leitor.Tipo = listBoxTipoLeitor.Text;
             }
             else
             {
@@ -120,6 +148,7 @@ namespace Library
             {
                 // exclui o objeto, Leitor
                 // uso futuro
+                leitores.Remove(leitor);
             }
             else
             {

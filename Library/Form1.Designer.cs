@@ -179,6 +179,7 @@
             dataGridViewLeitores.Name = "dataGridViewLeitores";
             dataGridViewLeitores.Size = new Size(660, 323);
             dataGridViewLeitores.TabIndex = 0;
+            dataGridViewLeitores.MouseDoubleClick += dataGridViewLeitores_MouseDoubleClick;
             // 
             // tabPage3
             // 
