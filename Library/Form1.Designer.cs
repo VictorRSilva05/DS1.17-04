@@ -200,6 +200,7 @@
             dataGridViewExemplares.Name = "dataGridViewExemplares";
             dataGridViewExemplares.Size = new Size(660, 323);
             dataGridViewExemplares.TabIndex = 0;
+            dataGridViewExemplares.DoubleClick += dataGridViewExemplares_DoubleClick;
             // 
             // Form1
             // 

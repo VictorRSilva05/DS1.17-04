@@ -114,5 +114,18 @@ namespace Library
             // atualiza a tela, ao fechar a tela de edição
             AtualizarDataGridView();
         }
+
+        private void dataGridViewExemplares_DoubleClick(object sender, EventArgs e)
+        {
+            // armazena o objeto selecionado
+            var exemplar = dataGridViewExemplares.CurrentRow.DataBoundItem as Exemplar;
+            MessageBox.Show($"{exemplar.GetType().Name}, {exemplar.Titulo}");
+            // abre a tela de edição de exemplar com o objeto selecionado
+            var form = new FormCadastroItem(exemplares, exemplar);
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog();
+            // atualiza a tela, ao fechar a tela de edição
+            AtualizarDataGridView();
+        }
     }
 }

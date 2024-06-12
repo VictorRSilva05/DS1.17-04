@@ -31,10 +31,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            buttonEditar = new Button();
+            buttonExcluir = new Button();
             comboBoxGenero = new ComboBox();
             numericUpDownAnoPublicacao = new NumericUpDown();
             comboBoxStatus = new ComboBox();
-            button1 = new Button();
+            buttonSalvar = new Button();
             tabControlExemplar = new TabControl();
             Livro = new TabPage();
             checkBoxEbook = new CheckBox();
@@ -94,10 +96,12 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(buttonEditar);
+            panel1.Controls.Add(buttonExcluir);
             panel1.Controls.Add(comboBoxGenero);
             panel1.Controls.Add(numericUpDownAnoPublicacao);
             panel1.Controls.Add(comboBoxStatus);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(buttonSalvar);
             panel1.Controls.Add(tabControlExemplar);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(Genêro);
@@ -116,6 +120,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(483, 718);
             panel1.TabIndex = 0;
+            // 
+            // buttonEditar
+            // 
+            buttonEditar.BackColor = Color.Yellow;
+            buttonEditar.Location = new Point(284, 646);
+            buttonEditar.Name = "buttonEditar";
+            buttonEditar.Size = new Size(75, 36);
+            buttonEditar.TabIndex = 31;
+            buttonEditar.Text = "Editar";
+            buttonEditar.UseVisualStyleBackColor = false;
+            buttonEditar.Click += buttonEditar_Click;
+            // 
+            // buttonExcluir
+            // 
+            buttonExcluir.BackColor = Color.Red;
+            buttonExcluir.Location = new Point(376, 646);
+            buttonExcluir.Name = "buttonExcluir";
+            buttonExcluir.Size = new Size(75, 36);
+            buttonExcluir.TabIndex = 27;
+            buttonExcluir.Text = "Excluir";
+            buttonExcluir.UseVisualStyleBackColor = false;
+            buttonExcluir.Click += buttonExcluir_Click;
             // 
             // comboBoxGenero
             // 
@@ -151,15 +177,16 @@
             comboBoxStatus.TabIndex = 24;
             comboBoxStatus.DataSource = Enum.GetValues(typeof(EnumExemplarStatus));
             // 
-            // button1
+            // buttonSalvar
             // 
-            button1.Location = new Point(16, 646);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 36);
-            button1.TabIndex = 23;
-            button1.Text = "Enviar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            buttonSalvar.BackColor = Color.Green;
+            buttonSalvar.Location = new Point(16, 646);
+            buttonSalvar.Name = "buttonSalvar";
+            buttonSalvar.Size = new Size(75, 36);
+            buttonSalvar.TabIndex = 23;
+            buttonSalvar.Text = "Salvar";
+            buttonSalvar.UseVisualStyleBackColor = false;
+            buttonSalvar.Click += button1_Click;
             // 
             // tabControlExemplar
             // 
@@ -639,7 +666,7 @@
         private Label label16;
         private Label label17;
         private Label label18;
-        private Button button1;
+        private Button buttonSalvar;
         private NumericUpDown numericUpDownAnoPublicacao;
         private ComboBox comboBoxStatus;
         private ComboBox comboBoxTipo;
@@ -656,5 +683,7 @@
         private NumericUpDown numericUpDownPaginasRevista;
         private NumericUpDown numericUpDownEdicaoHq;
         private Panel panelEbook;
+        private Button buttonExcluir;
+        private Button buttonEditar;
     }
 }
