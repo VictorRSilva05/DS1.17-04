@@ -127,5 +127,10 @@ namespace Library
             // atualiza a tela, ao fechar a tela de edição
             AtualizarDataGridView();
         }
+
+        private void dataGridViewExemplares_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
     }
 }

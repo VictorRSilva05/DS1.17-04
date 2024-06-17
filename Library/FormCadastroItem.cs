@@ -188,6 +188,11 @@ namespace Library
             MessageBox.Show("Exemplar excluído com sucesso!");
             Close();
         }
+
+        private void numericUpDownPaginasRevista_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

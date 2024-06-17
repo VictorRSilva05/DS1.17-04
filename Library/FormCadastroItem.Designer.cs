@@ -370,6 +370,7 @@
             // numericUpDownEdicaoHq
             // 
             numericUpDownEdicaoHq.Location = new Point(82, 24);
+            numericUpDownEdicaoHq.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             numericUpDownEdicaoHq.Name = "numericUpDownEdicaoHq";
             numericUpDownEdicaoHq.Size = new Size(104, 27);
             numericUpDownEdicaoHq.TabIndex = 27;
@@ -418,6 +419,7 @@
             // numericUpDownEdicaoRevista
             // 
             numericUpDownEdicaoRevista.Location = new Point(270, 26);
+            numericUpDownEdicaoRevista.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             numericUpDownEdicaoRevista.Name = "numericUpDownEdicaoRevista";
             numericUpDownEdicaoRevista.Size = new Size(99, 27);
             numericUpDownEdicaoRevista.TabIndex = 31;
@@ -425,9 +427,11 @@
             // numericUpDownPaginasRevista
             // 
             numericUpDownPaginasRevista.Location = new Point(97, 26);
+            numericUpDownPaginasRevista.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDownPaginasRevista.Name = "numericUpDownPaginasRevista";
             numericUpDownPaginasRevista.Size = new Size(99, 27);
             numericUpDownPaginasRevista.TabIndex = 30;
+            numericUpDownPaginasRevista.ValueChanged += numericUpDownPaginasRevista_ValueChanged;
             // 
             // label16
             // 
