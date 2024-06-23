@@ -1,7 +1,12 @@
+using System.Threading;
+
 namespace Library
 {
     public partial class Form1 : Form
     {
+        //Victor Rafael da Silva
+        //Matheus Bairros Silva
+        //Alan Jhosep Montanari Jutel
         List<Funcionario> funcionarios;
         List<Leitor> leitores;
         List<Exemplar> exemplares;
@@ -17,7 +22,7 @@ namespace Library
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormCadastroPessoa cli = new FormCadastroPessoa(funcionarios, leitores);
+            FormCadastroPessoa cli = new FormCadastroPessoa(funcionarios, leitores, exemplares);
             cli.StartPosition = FormStartPosition.CenterParent;
             cli.ShowDialog();
             AtualizarDataGridView();
@@ -31,7 +36,7 @@ namespace Library
             AtualizarDataGridView();
         }
 
-
+       
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -108,11 +113,13 @@ namespace Library
         {
             var leitor = dataGridViewLeitores.CurrentRow.DataBoundItem as Leitor;
             MessageBox.Show($"{leitor.GetType().Name}, {leitor.Nome}");
-            var form = new FormCadastroPessoa(leitores, leitor);
+            var form = new FormCadastroPessoa(leitores, leitor, exemplares);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog();
+            
             // atualiza a tela, ao fechar a tela de edição
             AtualizarDataGridView();
+            
         }
 
         private void dataGridViewExemplares_DoubleClick(object sender, EventArgs e)
@@ -130,7 +137,9 @@ namespace Library
 
         private void dataGridViewExemplares_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
         }
+
+    
     }
 }

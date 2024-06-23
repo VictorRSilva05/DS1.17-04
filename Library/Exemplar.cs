@@ -21,5 +21,10 @@
             Genero = genero;
             Status = status;
         }
+
+        public override string ToString()
+        {
+            return Titulo;
+        }
     }
 }

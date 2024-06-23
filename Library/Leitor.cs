@@ -12,12 +12,16 @@
             ExemplaresLeitor = exemplaresLeitor;
             EmprestimosLeitor = emprestimosLeitor;
             Tipo = tipo;
+
         }
 
         public Leitor(string nome, DateTime nascimento,string cpf, string email, string telefone,string tipo) : base (nome, nascimento, cpf, email, telefone)
         {
             Tipo = tipo;
+            ExemplaresLeitor = new List<Exemplar>();
         }
+
+        
 
         public bool EmprestarItem(Exemplar exemplar, Leitor destino)
         {
@@ -41,7 +45,7 @@
 
         public override void AdicionarExemplarLeitor(Exemplar exemplar, Leitor leitor)
         {
-            throw new NotImplementedException();
+            ExemplaresLeitor.Add(exemplar);
         }
 
         public override void EditaExemplarLeitor(Exemplar exemplar, Leitor leitor)

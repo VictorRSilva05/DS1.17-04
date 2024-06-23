@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            buttonExemplares = new Button();
             buttonEditar = new Button();
             buttonExcluir = new Button();
             tabControlPessoa = new TabControl();
@@ -67,6 +68,7 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(buttonExemplares);
             panel1.Controls.Add(buttonEditar);
             panel1.Controls.Add(buttonExcluir);
             panel1.Controls.Add(tabControlPessoa);
@@ -86,6 +88,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(511, 699);
             panel1.TabIndex = 0;
+            // 
+            // buttonExemplares
+            // 
+            buttonExemplares.BackColor = Color.DarkOrange;
+            buttonExemplares.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonExemplares.Location = new Point(104, 634);
+            buttonExemplares.Name = "buttonExemplares";
+            buttonExemplares.Size = new Size(164, 41);
+            buttonExemplares.TabIndex = 29;
+            buttonExemplares.Text = "Add. Exemplares";
+            buttonExemplares.UseVisualStyleBackColor = false;
+            buttonExemplares.Click += buttonExemplares_Click;
             // 
             // buttonEditar
             // 
@@ -412,5 +426,6 @@
         private TextBox textBoxFuncao;
         private Button buttonEditar;
         private Button buttonExcluir;
+        private Button buttonExemplares;
     }
 }

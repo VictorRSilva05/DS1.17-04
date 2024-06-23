@@ -12,15 +12,18 @@ namespace Library
 {
     public partial class FormCadastroPessoa : Form
     {
+        //Victor Rafael da Silva
         List<Funcionario> funcionarios;
         List<Leitor> leitores;
         Funcionario funcionario;
+        List<Exemplar> exemplares;
         Leitor leitor;
-        public FormCadastroPessoa(List<Funcionario> funcionarios, List<Leitor> leitores)
+        public FormCadastroPessoa(List<Funcionario> funcionarios, List<Leitor> leitores, List<Exemplar> exemplares)
         {
             InitializeComponent();
             this.funcionarios = funcionarios;
             this.leitores = leitores;
+            this.exemplares = exemplares;
         }
 
         // sobrecarga de construtor, novo construtor com lista de parâmetros diferente
@@ -50,12 +53,13 @@ namespace Library
         }
 
         // sobrecarga de construtor, novo construtor com lista de parâmetros diferente
-        public FormCadastroPessoa(List<Leitor> leitores, Leitor leitor)
+        public FormCadastroPessoa(List<Leitor> leitores, Leitor leitor, List<Exemplar> exemplares)
         {
             InitializeComponent();
             // atribui o objeto recebido à variável com escopo de classe
             this.leitor = leitor;
             this.leitores = leitores;
+            this.exemplares = exemplares;
             // carrega os valores do objeto recebido
             textBoxNome.Text = leitor.Nome;
             dateTimePickerNascimento.Value = leitor.Nascimento;
@@ -157,6 +161,13 @@ namespace Library
             }
             MessageBox.Show("Pessoa excluída com sucesso!");
             Close();
+        }
+
+        private void buttonExemplares_Click(object sender, EventArgs e)
+        {
+            FormAdicionarExemplares cli = new FormAdicionarExemplares(exemplares, leitor);
+            cli.StartPosition = FormStartPosition.CenterParent;
+            cli.ShowDialog();
         }
     }
 }
